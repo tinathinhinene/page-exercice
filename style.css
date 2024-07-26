@@ -3,6 +3,7 @@
     background: radial-gradient(circle, rgba(246,228,247,1) 0%, rgba(250,230,247,0.8197479675463936) 29%, rgba(213,214,242,1) 100%); 
     margin: 0px;
 }
+                                                        /*             page  d'accueil                    */
 h1{
     text-align: center;
     background-color: black;
@@ -10,27 +11,56 @@ h1{
     margin: 0;
     font-size: 90px;
 }
-.navbar{
-    color:black;
-    text-align: center;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.menu-icon{
-    display:flex;
-    justify-content: center;
-}
-.menu{
-    display:none;
-    flex-direction: column;
-    background: rgb(246,228,247);
-    background: radial-gradient(circle, rgba(246,228,247,1) 0%, rgba(240, 162, 228, 0.82) 29%, rgba(213,214,242,1) 100%); 
-    position:absolute;
-    width:100%;
-}
-.menu a{
-    color: blueviolet;
-    text-decoration: none;
 
+menuItem {
+  display: block;
+  margin: 2rem 4rem;
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+
+}
+
+.menuItem:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+  padding: 4px;
+  border: black solid 1px;
+  background: white;
+  cursor: pointer;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: black;
+  color: white;
+  list-style: none;
+  padding-top: 4rem;
+}
+
+.showMenu {
+  transform: translateY(0);
+}
+a{
+    text-decoration: none;
+    color:black;
+    font-weight: bolder;
+    font-size: 20px;
 }
